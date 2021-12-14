@@ -7,24 +7,26 @@
     <link rel="stylesheet" href="./assets/css/asignment6.css">
     <title>WWW</title>
 </head>
-<body>
-    <header>
-        <h1>WorldWide Weather</h1>
+<body class="flex-column min-100-vh">
+    <header class="hero">
+        <h1 class="app-title">WorldWide Weather</h1>
+        <p>Search for a city and see the weather!</p>
     </header>
     
+    <main class="flex-row justify-space-between">
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <h3 class="card-header">Search for a City:</h3>
+                <form id="user-form" class="card-form">
+                    <input name="search-npt" id="search-npt" type="text" autofocus="true" class="form-input">
+                    <button type="submit" class="btn">Search</button>
+                </form>
+            </div>
+            <div class="container">
 
-    <main>
-        <div>
-            <h3>Search for a City:</h3>
-            <form>
-                <label for="search-npt" class="form-label">City</label>
-                <input name="search-npt" id="search-npt" type="text" autofocus="true" class="form-input">
-                <button type="submit" class="search-btn">Search</button>
-            </form>
+            </div>
         </div>
-        <div>
-
-        </div>
+        
     </main>
     
     <script src="./assets/js/assignment6.js"></script>
