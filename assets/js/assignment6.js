@@ -2,7 +2,6 @@ var apiKey = ["2632ab542fff737012a28d74931b6af5"];
 var userFormEl = document.querySelector("#user-form");
 var cityInputEl = document.querySelector("#search-npt");
 var wCurrentEl = document.querySelector("#w-current");
-
 var wCastEl = document.querySelector("#weekly-cast");
 
 var formSubmitHandler = function(event) {
@@ -64,12 +63,7 @@ var displayWeather = function(data) {
     console.log(data.current);
     console.log(data.current.weather[0].description);
 
-    // var wCurrentEl = document.createElement("div");
-    // wCurrentEl.classList = "w-container col-12 col-md-10 flex-column"
-
-
     // create variables using weather data
- 
     var tempEl = document.createElement("p");
     tempEl.textContent = "Temp: " + data.current.temp + "";
     wCurrentEl.append(tempEl);
@@ -87,6 +81,11 @@ var displayWeather = function(data) {
     uviEl.textContent = "UVI Index: " + data.current.uvi;
     wCurrentEl.append(uviEl);
 
+    for (var i = 0; i < 5; i++) {
+        var dailyCard = document.createElement("div");
+        dailyCard.classList = "card col-2 p-1";
+        wCastEl.append(dailyCard);
+    }
 };
 
 formSubmitHandler();
