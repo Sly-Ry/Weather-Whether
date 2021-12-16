@@ -2,16 +2,14 @@ var apiKey = ["2632ab542fff737012a28d74931b6af5"];
 var userFormEl = document.querySelector("#user-form");
 var cityInputEl = document.querySelector("#search-npt");
 var wCurrentEl = document.querySelector("#w-current");
-var classNameEl = document.querySelector("h2");
+
 var wCastEl = document.querySelector("#weekly-cast");
 
 var formSubmitHandler = function(event) {
     event.preventDefault();
 
     // get value from input element
-    var cityName = cityInputEl.value.trim().charAt(0).toUpperCase() + cityInputEl.value.slice(1);
-
-    classNameEl.append(cityName);
+    var cityName = cityInputEl.value.trim();
 
     if (cityName) {
         getLatLon(cityName);
@@ -30,6 +28,12 @@ var getLatLon = function(cityName) {
     .then(function(response) {                     
         response.json().then(function(data) {
            getCityWeather(data[0].lat, data[0].lon);
+
+           var NameEl = document.createElement("h2");
+           NameEl.classList = "city-name"
+           NameEl.textContent = data[0].name + ", " + data[0].state;
+           wCurrentEl.append(NameEl)
+
         });
     })
     .catch (function(error){
@@ -65,6 +69,7 @@ var displayWeather = function(data) {
 
 
     // create variables using weather data
+ 
     var tempEl = document.createElement("p");
     tempEl.textContent = "Temp: " + data.current.temp + "";
     wCurrentEl.append(tempEl);
