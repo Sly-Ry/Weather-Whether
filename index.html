@@ -14,24 +14,29 @@
         <p>Search for a city and see the weather!</p>
     </header>
     
-    <main class="container">
+    <main class="container col-11">
         <div class="row align-items-start">
-            <div class="card col-12">
+            <div class="col-12 col-md-3 card ">
                 <label class="form-label">Search for a City:</h3>
                 <form id="user-form" class="card-form">
                     <input name="search-npt" id="search-npt" type="text" autofocus="true" class="form-input">
                     <button type="submit" class="btn">Search</button>
                 </form>
+
             </div> 
-            <div class="w-container col-12 col-md-10" class="flex-column">
-            
+            <div id="w-container" class="col-12 col-md-9 flex-column ">
+                <div id= "w-current" class="card p-2">
+                    <h2 class="city-name"></h2>
+                </div>
+                <div id="weekly-cast" class="card">
             </div>
+            
         </div>
 
        
 
     </main>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./assets/js/assignment6.js"></script>
 </body>
 </html>
