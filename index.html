@@ -4,31 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/asignment6.css">
     <title>WWW</title>
 </head>
 <body class="flex-column min-100-vh">
-    <header class="hero">
+    <header class="hero d-flex flex-column align-items-center p-10;">
         <h1 class="app-title">WorldWide Weather</h1>
         <p>Search for a city and see the weather!</p>
     </header>
     
-    <main class="flex-row justify-space-between">
-        <div class="col-12 col-md-4">
-            <div class="card">
-                <h3 class="card-header">Search for a City:</h3>
+    <main class="container">
+        <div class="row align-items-start">
+            <div class="card col-12">
+                <label class="form-label">Search for a City:</h3>
                 <form id="user-form" class="card-form">
                     <input name="search-npt" id="search-npt" type="text" autofocus="true" class="form-input">
                     <button type="submit" class="btn">Search</button>
                 </form>
-            </div>
-
-            <div class="flex-column col-12 col-md-8">
-                <h2 class="subtitle">city name<span id="city-search-item"></span></h2>
-                <div id="weather-container" class="flex-row justify-space-around"></div>
+            </div> 
+            <div class="w-container col-12 col-md-10" class="flex-column">
+            
             </div>
         </div>
-        
+
+       
+
     </main>
     
     <script src="./assets/js/assignment6.js"></script>
