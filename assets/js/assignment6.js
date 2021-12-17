@@ -13,6 +13,9 @@ var today = new Date();
 var date = (today.getMonth()+1) +'/'+ today.getDate() + '/' + today.getFullYear();
 
 var formSubmitHandler = function(event) {
+    wCurrentEl.innerHTML = "";
+    dailyHeadEl.textContent = "";
+    wCastEl.textContent = "";
     event.preventDefault();
 
     // get value from input element
@@ -39,12 +42,16 @@ var getLatLon = function(cityName) {
     fetch(apiUrl)
     .then(function(response) {                     
         response.json().then(function(data) {
-           getCityWeather(data[0].lat, data[0].lon);
+            getCityWeather(data[0].lat, data[0].lon);
 
-           var NameEl = document.createElement("h2");
-           NameEl.classList = "city-name pb-3"
-           NameEl.textContent = data[0].name + ", " + data[0].state + " (" + date + ")";
-           wCurrentEl.append(NameEl)
+            var NameEl = document.createElement("h2");
+            NameEl.classList = "city-name pb-3"
+            NameEl.textContent = data[0].name + ", " + data[0].state + " (" + date + ")";
+            wCurrentEl.append(NameEl);
+
+            var dailyTitle = document.createElement("h4");
+            dailyTitle.textContent = "5-Day Forecast:";
+            dailyHeadEl.append(dailyTitle);
 
         });
     })
@@ -94,10 +101,6 @@ var displayWeather = function(data) {
     uviEl.textContent = "UVI Index: " + data.current.uvi;
     wCurrentEl.append(uviEl);
 
-    var dailyTitle = document.createElement("h4");
-    dailyTitle.textContent = "5-Day Forecast:"
-    dailyHeadEl.append(dailyTitle);
-
     for (var i = 0; i < 5; i++) {
         
         var dailyCard = document.createElement("div");
@@ -129,7 +132,7 @@ var displayWeather = function(data) {
 };
 
 var saveCity = function() {
-    localStorage.setItem("city", JSON.stringify(cityName));
+    localStorage.setItem("city", JSON.stringify(cityInputEl));
 };
 
 formSubmitHandler();
