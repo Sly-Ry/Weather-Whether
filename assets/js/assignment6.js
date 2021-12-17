@@ -85,7 +85,22 @@ var displayWeather = function(data) {
         var dailyCard = document.createElement("div");
         dailyCard.classList = "card col-2 p-1";
         wCastEl.append(dailyCard);
+
+        // data[i].daily.
+
+        var dTempEl = document.createElement("p");
+        dTempEl.textContent = "Temp: " + data.daily[i].temp.day + "";
+        dailyCard.append(dTempEl);
+
+        var wSpeedEl = document.createElement("p");
+        wSpeedEl.textContent = "Wind: " + data.current.wind_speed + " MPH";
+        wCurrentEl.append(wSpeedEl);
+
+        var humidityEl = document.createElement("p");
+        humidityEl.textContent = "Humidity: " + data.current.humidity + "%";
+        wCurrentEl.append(humidityEl);
     }
+
 };
 
 formSubmitHandler();
