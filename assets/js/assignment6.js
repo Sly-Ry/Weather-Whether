@@ -2,7 +2,15 @@ var apiKey = ["2632ab542fff737012a28d74931b6af5"];
 var userFormEl = document.querySelector("#user-form");
 var cityInputEl = document.querySelector("#search-npt");
 var wCurrentEl = document.querySelector("#w-current");
+var dailyHeadEl = document.querySelector("#daily-head");
 var wCastEl = document.querySelector("#weekly-cast");
+
+// array for saving city searches
+var search = [];
+
+var today = new Date(); 
+
+var date = (today.getMonth()+1) +'/'+ today.getDate() + '/' + today.getFullYear();
 
 var formSubmitHandler = function(event) {
     event.preventDefault();
@@ -17,6 +25,11 @@ var formSubmitHandler = function(event) {
     else {
         alert("Please enter the name of a city.");
     }
+    
+    // add city to search array
+    search.push(cityName);
+
+    saveCity();
 };
 
 // gets the lat and lon coordinates in order to find city
@@ -29,8 +42,8 @@ var getLatLon = function(cityName) {
            getCityWeather(data[0].lat, data[0].lon);
 
            var NameEl = document.createElement("h2");
-           NameEl.classList = "city-name"
-           NameEl.textContent = data[0].name + ", " + data[0].state;
+           NameEl.classList = "city-name pb-3"
+           NameEl.textContent = data[0].name + ", " + data[0].state + " (" + date + ")";
            wCurrentEl.append(NameEl)
 
         });
@@ -81,26 +94,42 @@ var displayWeather = function(data) {
     uviEl.textContent = "UVI Index: " + data.current.uvi;
     wCurrentEl.append(uviEl);
 
+    var dailyTitle = document.createElement("h4");
+    dailyTitle.textContent = "5-Day Forecast:"
+    dailyHeadEl.append(dailyTitle);
+
     for (var i = 0; i < 5; i++) {
+        
         var dailyCard = document.createElement("div");
-        dailyCard.classList = "card col-2 p-1";
+        dailyCard.classList = "card col-2 bg-primary text-light h-150 p-1 shadow p-3 mb-5 bg-body rounded"
+        dailyCard.style = "--bs-bg-opacity: .5";
         wCastEl.append(dailyCard);
 
         // data[i].daily.
+        
+        var dateEl = (today.getMonth()+1) +'/'+ (today.getDate() + 1 + i) + '/' + today.getFullYear();
+        dailyCard.append(dateEl);
 
-        var dTempEl = document.createElement("p");
+        var dTempEl = document.createElement("h7");
+        dTempEl.classList = "p-2"
         dTempEl.textContent = "Temp: " + data.daily[i].temp.day + "";
         dailyCard.append(dTempEl);
 
-        var wSpeedEl = document.createElement("p");
-        wSpeedEl.textContent = "Wind: " + data.current.wind_speed + " MPH";
-        wCurrentEl.append(wSpeedEl);
+        var dSpeedEl = document.createElement("h7");
+        dSpeedEl.classList = "p-2"
+        dSpeedEl.textContent = "Wind: " + data.daily[i].wind_speed + " mph";
+        dailyCard.append(dSpeedEl);
 
-        var humidityEl = document.createElement("p");
-        humidityEl.textContent = "Humidity: " + data.current.humidity + "%";
-        wCurrentEl.append(humidityEl);
+        var dHumidityEl = document.createElement("h7");
+        dHumidityEl.classList = "p-2"
+        dHumidityEl.textContent = "Humidity: " + data.daily[i].humidity + "%";
+        dailyCard.append(dHumidityEl);
     }
 
+};
+
+var saveTasks = function() {
+    localStorage.setItem("tasks", JSON.stringify(cityInputEl));
 };
 
 formSubmitHandler();
