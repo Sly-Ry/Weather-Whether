@@ -20,12 +20,12 @@ var formSubmitHandler = function(event) {
 
     if (cityName) {
         getLatLon(cityName);
-        cityInputEl = "";
+        cityInputEl.value = "";
     }
     else {
         alert("Please enter the name of a city.");
     }
-    
+
     // add city to search array
     search.push(cityName);
 
@@ -128,8 +128,8 @@ var displayWeather = function(data) {
 
 };
 
-var saveTasks = function() {
-    localStorage.setItem("tasks", JSON.stringify(cityInputEl));
+var saveCity = function() {
+    localStorage.setItem("city", JSON.stringify(cityName));
 };
 
 formSubmitHandler();
