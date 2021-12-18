@@ -6,15 +6,12 @@ var wCurrentEl = document.querySelector("#w-current");
 var dailyHeadEl = document.querySelector("#daily-head");
 var wCastEl = document.querySelector("#weekly-cast");   
 
-
 // array for saving city searches
 var search = [];
 
 var today = new Date(); 
 
 var date = (today.getMonth()+1) +'/'+ today.getDate() + '/' + today.getFullYear();
-
-
 
 var formSubmitHandler = function(e) {
     e.preventDefault();
@@ -41,21 +38,20 @@ var formSubmitHandler = function(e) {
 
 // gets the lat and lon coordinates in order to find city
 var getLatLon = function(cityName) {
+    
     var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey;
 
-    fetch(apiUrl)
-    .then(
-        function(response){                     
+    fetch(apiUrl).then(
+        function(response) {                     
         response.json().then(
             function(data) {
             getCityWeather(data[0].lat, data[0].lon);
-            
+
             var sNameEl = document.createElement("button");
-            sNameEl.classList = "form-input";
+            sNameEl.classList = "col-9 btn-info rounded";
             sNameEl.textContent = data[0].name;
             
             search.push(sNameEl.textContent);
-            console.log(search);
             saveCity();
             
             searchColEl.append(sNameEl);
@@ -68,7 +64,6 @@ var getLatLon = function(cityName) {
             var dailyTitle = document.createElement("h4");
             dailyTitle.textContent = "5-Day Forecast:";
             dailyHeadEl.append(dailyTitle);
-
         });
         
         
@@ -82,6 +77,7 @@ var getLatLon = function(cityName) {
 
 // gets weather for search city
 var getCityWeather = function(lat, lon) {
+    
     var wApiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=hourly,minutely&units=imperial&appid=" + apiKey;
     
     fetch(wApiUrl)
@@ -96,11 +92,11 @@ var getCityWeather = function(lat, lon) {
     });
 };
 
+// click button function
 userFormEl.addEventListener("submit", formSubmitHandler);
 
+// 
 var displayWeather = function(data) {
-    // console.log(data.current);
-    // console.log(data.current.weather[0].main);
 
     // create variables using weather data
     var tempEl = document.createElement("p");
@@ -168,31 +164,26 @@ var displayWeather = function(data) {
 
 };
 
+// saves the info to localstorage (-- T.A. Queen helped with this)
 var saveCity = function() {
     localStorage.setItem("city", JSON.stringify(search));
 };
 
-// loads cities to page
+// loads cities to page (-- T.A. Queen helped with this)
 var loadCity = function() {
     // get city items from localstorage
     var savedSearch = localStorage.getItem("city");
-    
 
     // converts string format back to an array
     savedSearch = JSON.parse(savedSearch);
 
     for (i = 0; i < savedSearch.length; i++) {
-        // pass each city into the 'formSubmitHandler' function
-        console.log(savedSearch[i]);
-
         var sNameEl = document.createElement("button");
-        sNameEl.classList = "form-input";
+        sNameEl.classList = "col-9 btn-info rounded";
         sNameEl.textContent = savedSearch[i];
         
         searchColEl.append(sNameEl);
     }
-    
-    console.log(savedSearch)
 };
 
 loadCity();
