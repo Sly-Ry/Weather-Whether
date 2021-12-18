@@ -84,7 +84,7 @@ var getCityWeather = function(lat, lon) {
     .then(function(response) {                     
         response.json().then(function(data) {
             displayWeather(data);
-            // console.log(data.daily);
+            console.log(data.daily);
         });
     })
     .catch (function(error){
@@ -112,7 +112,7 @@ var displayWeather = function(data) {
     wCurrentEl.append(wSpeedEl);
 
     var uviEl = document.createElement("p");
-    uviEl.classList = "success";
+    uviEl.classList = "";
     uviEl.textContent = "UVI Index: " + data.current.uvi;
     wCurrentEl.append(uviEl);
 
