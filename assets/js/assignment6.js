@@ -1,4 +1,3 @@
-var apiKey = ["2632ab542fff737012a28d74931b6af5"];
 var userFormEl = document.querySelector("#user-form");
 var searchColEl = document.querySelector("#search-col")
 var cityInputEl = document.querySelector("#search-npt");
@@ -39,7 +38,7 @@ var formSubmitHandler = function(e) {
 // gets the lat and lon coordinates in order to find city
 var getLatLon = function(cityName) {
     
-    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey;
+    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=2632ab542fff737012a28d74931b6af5";
 
     fetch(apiUrl).then(
         function(response) {                     
@@ -78,7 +77,7 @@ var getLatLon = function(cityName) {
 // gets weather for search city
 var getCityWeather = function(lat, lon) {
     
-    var wApiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=hourly,minutely&units=imperial&appid=" + apiKey;
+    var wApiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=hourly,minutely&units=imperial&appid=2632ab542fff737012a28d74931b6af5";
     
     fetch(wApiUrl)
     .then(function(response) {                     
