@@ -13,10 +13,11 @@ var today = new Date();
 var date = (today.getMonth()+1) +'/'+ today.getDate() + '/' + today.getFullYear();
 
 var formSubmitHandler = function(e) {
-    e.preventDefault();
-    console.log(e.value);
     // event.preventDefault();
+    e.preventDefault();
+    // console.log(e.value);
     
+    // clear input area
     wCurrentEl.innerHTML = "";
     dailyHeadEl.textContent = "";
     wCastEl.textContent = "";
@@ -38,34 +39,37 @@ var formSubmitHandler = function(e) {
 // gets the lat and lon coordinates in order to find city
 var getLatLon = function(cityName) {
     
-    var apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=2632ab542fff737012a28d74931b6af5";
+    // var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + 
+    
+    
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&limit=1&appid=2632ab542fff737012a28d74931b6af5";
+    // console.log(apiUrl);
 
-    fetch(apiUrl).then(
-        function(response) {                     
-        response.json().then(
-            function(data) {
-            getCityWeather(data[0].lat, data[0].lon);
-
-            var sNameEl = document.createElement("button");
-            sNameEl.classList = "col-9 btn-info rounded";
-            sNameEl.textContent = data[0].name;
+    fetch(apiUrl)
+    .then (function (response) {                     
+        response.json()
+        .then(function(data) {
+            // console.log(data)
+                getCityWeather(data.coord.lat, data.coord.lon);
             
-            search.push(sNameEl.textContent);
-            saveCity();
-            
-            searchColEl.append(sNameEl);
+                var sNameEl = document.createElement("button");
+                sNameEl.classList = "col-9 btn-info rounded";
+                sNameEl.textContent = data.name;
+                
+                search.push(sNameEl.textContent);
+                saveCity();
+                
+                searchColEl.append(sNameEl);
 
-            var NameEl = document.createElement("h2");
-            NameEl.classList = "city-name pb-3"
-            NameEl.textContent = data[0].name + ", " + data[0].state + " (" + date + ")";
-            wCurrentEl.append(NameEl);
+                var NameEl = document.createElement("h2");
+                NameEl.classList = "city-name pb-3"
+                NameEl.textContent = data.name + " (" + date + ")";
+                wCurrentEl.append(NameEl);
 
-            var dailyTitle = document.createElement("h4");
-            dailyTitle.textContent = "5-Day Forecast:";
-            dailyHeadEl.append(dailyTitle);
+                var dailyTitle = document.createElement("h4");
+                dailyTitle.textContent = "5-Day Forecast:";
+                dailyHeadEl.append(dailyTitle);
         });
-        
-        
     })
     .catch (function(error){
         if( error){
@@ -83,7 +87,7 @@ var getCityWeather = function(lat, lon) {
     .then(function(response) {                     
         response.json().then(function(data) {
             displayWeather(data);
-            console.log(data.daily);
+            // console.log(data.daily);
         });
     })
     .catch (function(error){
