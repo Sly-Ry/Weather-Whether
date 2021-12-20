@@ -28,4 +28,6 @@ FUNctions:
 Updates coming soon 
 - Whenever the user clicks on a city in the search history they are presented with current and future conditions for that city again
 
+credit to my teammate Andrew Wales for assisting me throughout this assignment. (this guy came in clutch)
+
 URL: https://sly-ry.github.io/WorldWide-Weather/
