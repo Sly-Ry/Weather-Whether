@@ -5,27 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/asignment6.css">
     <title>WWW</title>
+    <!-- Font Awesome CSS Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/asignment6.css">
+    
 </head>
-<body class="flex-column min-100-vh">
-    <header class="hero d-flex flex-column align-items-center p-2 pt-1;">
-        <h1 class="app-title">WorldWide Weather</h1>
-        <p class="pt-4">Search for a city and see the weather!</p>
+<body>
+    <!-- Jumbotron for header -->
+    <header class="jumbotron-fluid w-container p-4 bg-primary text-center text-white">
+        <h1><strong><u>Weather Dashboard</u></strong></h1>
     </header>
     
-    <main class="container col-11">
-        <div class="row align-items-start">
-            <div id="search-col" class="col-12 col-md-3 card ">
+    <main class="container">
+        <!-- row for searching cities -->
+        <div class="row">
+
+            <div class="col-sm-4 bg-light">
+
+                <h4 class="pt-1"><strong>Location:</strong></h4>
+
+                <!-- html for handling inputs -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="search-city" aria-label="City Search" aria-describedby="search-button" placeholder="City, ST">
+                    <div class="input-group-append">
+                        <button class="btn bg-primary text-white" id="search-button"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+
+                <!-- section for search city history -->
+                <button class="btn btn-primary" type="button" id="clear-history">Clear</button>
+                <ul class="list-group">
+
+                </ul>
+            </div>
+
+            <div class="col-sm-8">
+
+                <div class="row ml-2 border border-dark rounded">
+
+                    <div class="col-sm-12" id="current-weather">
+
+                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                        <p>Temperature:<span class="current" id="temperature"></span></p>
+                        <p>Humidity:<span class="current" id="humidity"></span></p>
+                        <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                        <p>UV index:<span class="current bg-danger rounded py-2 px-2 text-white" id="uv-index"></span></p>
+                    </div>
+                </div>
+
+                <!-- row for forcast data -->
+                <div class="col-sm-12" id="forecast">
+
+                    <h3>5-Day Forecast:</h3>
+                    
+                    <div class="row text-light">
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate0"></p>
+                            <p id="fImg0"></p>
+                            <p>Temp:<span id="fTemp0"></span></p>
+                            <p>Humidity<span id="fHumidity0"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate1"></p>
+                            <p id="fImg1"></p>
+                            <p>Temp:<span id="fTemp1"></span></p>
+                            <p>Humidity<span id="fHumidity1"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate2"></p>
+                            <p id="fImg2"></p>
+                            <p>Temp:<span id="fTemp2"></span></p>
+                            <p>Humidity<span id="fHumidity2"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate3"></p>
+                            <p id="fImg3"></p>
+                            <p>Temp:<span id="fTemp3"></span></p>
+                            <p>Humidity<span id="fHumidity3"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate4"></p>
+                            <p id="fImg4"></p>
+                            <p>Temp:<span id="fTemp4"></span></p>
+                            <p>Humidity<span id="fHumidity4"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div id="search-col" class="col-12 col-md-3 card ">
                 <label class="form-label">Search for a City:</h3>
                 <form id="user-form" class="card-form shadow-sm mb-2 bg-body rounded">
                     <input name="search-npt" id="search-npt" type="text" autofocus="true" class="form-input">
                     <button type="submit" class="btn">Search</button>
                 </form>
+            </div>  -->
 
-            </div> 
             <div id="w-container" class="col-12 col-md-9 flex-column ">
                 <div id= "w-current" class="card p-2 shadow-sm p-3 bg-body rounded"></div>
                 <div id="daily-head" class="p-2"></div>
