@@ -111,3 +111,11 @@ function UVIndex(ln, lt){
         $(currentUVIndex).html(response.value);
     });
 }
+
+// display 5 day forecast for current city
+function forecast(cityId){
+    var weekly = false;
+    var queryForecastURL = ''
+}
+
+// dynamically add city to search history
