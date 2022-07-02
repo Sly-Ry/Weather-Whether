@@ -102,5 +102,12 @@ function currentWeather(city){
 // returns the UVIndex response
 function UVIndex(ln, lt){
     // url for UVIndex
-    var uvURL = ''
+    var uvURL = 'https://api.openweathermap.org/data/3.0/onecall?lat=' + lt + '&lon=' + ln + '&appid=' + APIKey
+
+    $ajax({
+        url: uvURL,
+        method: 'GET',
+    }).then(function(response){
+        $(currentUVIndex).html(response.value);
+    });
 }
