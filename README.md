@@ -5,9 +5,7 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
 
   ![Language](http://img.shields.io/github/languages/top/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor)
   
-  gh api \
-  -H "Accept: application/vnd.github+json" \
-  /repos/Sly-Ry/WorldWide-Weather/languages
+  ![Language](http://img.shields.io/github/repo/Sly-Ry/WorldWide-Weather/languages?style=flat&logo=appveyor) 
   
   ## Description 
   
