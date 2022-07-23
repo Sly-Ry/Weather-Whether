@@ -40,9 +40,9 @@ function displayWeather(e){
 } 
 
 function currentWeather(city){
-    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q' + city + '&APPID=' + APIKey;
+    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=' + APIKey;
 
-    $ajax({
+    $.ajax({
         url: queryURL,
         method: 'GET'
     })
@@ -73,7 +73,7 @@ function currentWeather(city){
         $(currentWindSpeed).html(windsMPH + 'MPH')
 
         // display UV index
-        UVIndex(response.cord.lon, response.coord.lat);
+        UVIndex(response.coord.lon, response.coord.lat);
         
         forecast(response.id);
         
@@ -107,7 +107,7 @@ function UVIndex(ln, lt){
     // url for UVIndex
     var uvURL = 'https://api.openweathermap.org/data/3.0/onecall?lat=' + lt + '&lon=' + ln + '&appid=' + APIKey
 
-    $ajax({
+    $.ajax({
         url: uvURL,
         method: 'GET',
     }).then(function(response){
@@ -120,7 +120,7 @@ function forecast(cityId){
     var weekly = false;
     var queryForecastURL = 'https://api.openweathermap.org/data/3.0/forecast?id=' + cityId + '&appid=' + APIKey;
 
-    $ajax({
+    $.ajax({
         url: queryForecastURL,
         method: 'GET'
     }).then(function(response){
@@ -148,11 +148,12 @@ function forecast(cityId){
 
 // dynamically add city to search history
 
-// display the past search again when the list group item is clicked in search history
+// Search history click search
 function pastSearch(event){
-    var liEl=event.target;
+    var liEl = event.target;
     if (event.target.matches("li")){
         city=liEl.textContent.trim();
+        
         currentWeather(city);
     }
 }
@@ -174,6 +175,13 @@ function loadlastCity(){
         
         currentWeather(city);
     }
+}
+
+function clearHistory(event){
+    event.preventDefault();
+    savedC = [];
+    localStorage.removeItem('cityname');
+    document.location.reload();
 }
 
 // Click Handlers
