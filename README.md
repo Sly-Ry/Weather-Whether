@@ -1,6 +1,5 @@
 # WorldWide-Weather
 
-# WorldWide-Weather
 URL: https://sly-ry.github.io/WorldWide-Weather/
 
   ![Language](http://img.shields.io/github/languages/top/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor)
@@ -59,10 +58,8 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
   
   ## Credit
   
-  + Ryan Williams   
-  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sly-Ry&theme=cobalt)
-  
-  + Andrew Wales
+  + Ryan Williams     
+  + [![Andrew Wales](https://contrib.rocks/image?repo=diirtydog/Take-This-Job-And)](https://github.com/diirtydog/Take-This-Job-And)
   + Sahil Janbandhu (Original Design)
   + James Fisher (Updated Design)
 
