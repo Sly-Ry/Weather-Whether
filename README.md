@@ -15,27 +15,28 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [License](#license)
+  
   ## Usage 
 
   *Examples for use:*
   
   Enter city name into search bar:
   
-- Day Info:
-  + City name
-  + Current date
-  + An icon representation of weather conditions (coming soon)
-  + Temperature
-  + Humidity
-  + Wind speed
-  + UV index (presented with a color that indicates whether the conditions are favorable, moderate, or severe: coming soon)
-
-- Forecast Info:
-    + Date
-    + Icon representation of weather conditions
+  - Day Info:
+    + City name
+    + Current date
+    + An icon representation of weather conditions (coming soon)
     + Temperature
-    + Wind speed
     + Humidity
+    + Wind speed
+    + UV index (presented with a color that indicates whether the conditions are favorable, moderate, or severe: coming soon)
+
+  - Forecast Info:
+      + Date
+      + Icon representation of weather conditions
+      + Temperature
+      + Wind speed
+      + Humidity
 
   ## Contributing
   
@@ -43,11 +44,11 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
 
   To contribute to this application, create a pull request. Here are the steps needed for doing that:
 
-- Fork the repo
-- Create a feature branch (git checkout -b NAME-HERE)
-- Commit your new feature (git commit -m 'add new feature')
-- Push your branch (git push)
-- Create a new Pull Request
+  - Fork the repo
+  - Create a feature branch (git checkout -b NAME-HERE)
+  - Commit your new feature (git commit -m 'add new feature')
+  - Push your branch (git push)
+  - Create a new Pull Request
 
 Following a code review, your feature will be merged.
 
