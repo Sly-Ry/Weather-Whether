@@ -55,15 +55,16 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
 
   MIT License
   
-  
   ## Credit
   
   [![Ryan Williams](https://contrib.rocks/image?repo=Sly-Ry/NoSpace)](https://github.com/Sly-Ry) Ryan Williams
+  
   [![Andrew Wales](https://contrib.rocks/image?repo=diirtydog/Take-This-Job-And)](https://github.com/diirtydog) Andrew Wale
+  
   [![Sahil Janbandhu](https://contrib.rocks/image?repo=sahiljanbandhu/Weather-Dashboard)](https://github.com/sahiljanbandhu) Sahil Janbandhu (Original Design)
+  
   [![James Fisher](https://contrib.rocks/image?repo=jfisher396/weather-dashboard)](https://github.com/jfisher396/weather-dashboard) James Fisher (Updated Design)
 
-  
   ---
   
   ## Comments
