@@ -39,8 +39,8 @@ function displayWeather(e){
     }
 } 
 
-function currentWeather(city){
-    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=' + APIKey;
+function currentWeather(c){
+    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + c + '&APPID=' + APIKey;
 
     $.ajax({
         url: queryURL,
@@ -150,18 +150,18 @@ function forecast(cityId){
 }
 
 // dynamically add city to search history
-function addCity(city){
-    var listEl = $('<li>' + city.toUpperCase() + '</li>');
+function addCity(c){
+    var listEl = $('<li>' + c.toUpperCase() + '</li>');
 
     $(listEl).attr('class','list-group-item');
-    $(listEl).attr('data-value', city.toUpperCase());
+    $(listEl).attr('data-value', c.toUpperCase());
     $('.list-group').append(listEl);
 }
 
 // Search history click search
-function pastSearch(event){
-    var liEl = event.target;
-    if (event.target.matches("li")){
+function pastSearch(e){
+    var liEl = e.target;
+    if (e.target.matches("li")){
         city=liEl.textContent.trim();
         
         currentWeather(city);
@@ -187,8 +187,8 @@ function loadlastCity(){
     }
 }
 
-function clearHistory(event){
-    event.preventDefault();
+function clearHistory(e){
+    e.preventDefault();
     savedC = [];
     localStorage.removeItem('cityname');
     document.location.reload();
