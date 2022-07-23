@@ -3,7 +3,7 @@
 # WorldWide-Weather
 URL: https://sly-ry.github.io/WorldWide-Weather/
 
-  ![Language](http://img.shields.io/github/languages/top/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor)
+  ![Language](http://img.shields.io/github/languages/html/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor)
   
   ## Description 
   
