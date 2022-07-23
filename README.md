@@ -59,7 +59,7 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
   ## Credit
   
   + Ryan Williams     
-  + [![Andrew Wales](https://contrib.rocks/image?repo=diirtydog/Take-This-Job-And)](https://github.com/diirtydog/Take-This-Job-And) andrew.derek.wales@gmail.com [![Andrew Wales](https://contrib.rocks/image?repo=diirtydog/Take-This-Job-And)](https://github.com/diirtydog
+  + [![Andrew Wales](https://contrib.rocks/image?repo=diirtydog/Take-This-Job-And)](https://github.com/diirtydog)
   + Sahil Janbandhu (Original Design)
   + James Fisher (Updated Design)
 
