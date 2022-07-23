@@ -1,5 +1,57 @@
 # WorldWide-Weather
 
+# WorldWide-Weather
+
+  ![Language](http://img.shields.io/github/languages/top/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor)
+
+
+  ## Description 
+  
+  A weather dashboard that displays the current and 5-Days forecast of a searched city using the server-side API retrived from the Open Weather API.
+  
+  ## Table of Contents
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [License](#license)
+  ## Usage 
+
+  *Examples for use:*
+  
+  Enter desire city into search bar
+
+  ## Contributing
+  
+  *If you would like to contribute to this application, follow these guidelines for how to do so.*
+
+  To contribute to this application, create a pull request. Here are the steps needed for doing that:
+
+  ## Tests
+  
+  *Tests for application.*
+  
+  Create a feature branch (git checkout -b NAME-HERE)
+
+  ## License
+
+  MIT License
+  
+  ---
+  
+  ## Comments
+  
+  <img src="https://avatars.githubusercontent.com/u/93052960?v=4" alt="Sly-Ry" width="30%" />
+  
+  For any questions and/or suggestions, please contact me:
+ 
+  GitHub: [@Sly-Ry](https://github.com/Sly-Ry)
+  
+    
+  Email: ryan.williams93@aol.com
+    
+  LinkedIn: https://www.linkedin.com/in/ryan-williams-338334224/
+
+
 User Story:
 - As a traveler, I want to see the weather outlook for multiple cities so that I can plan a trip accordingly.
 
