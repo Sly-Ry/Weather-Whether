@@ -68,7 +68,7 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
   ## Comments
   
   <img src="https://avatars.githubusercontent.com/u/93052960?v=4" alt="Sly-Ry" width="30%" />
-  ![Top Languages](https://github-readme-stats.vercel.app/api?username=Sly-Ry&theme=cobalt)](https://github.com/Sly-Ry/github-readme-stats)
+  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sly-Ry)](https://github.com/Sly-Ry/github-readme-stats)
   
   For any questions and/or suggestions, please contact me:
  
