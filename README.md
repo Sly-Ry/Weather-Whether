@@ -60,6 +60,7 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
   
   [![Ryan Williams](https://contrib.rocks/image?repo=Sly-Ry/NoSpace)](https://github.com/Sly-Ry) Ryan Williams     
   [![Andrew Wales](https://contrib.rocks/image?repo=diirtydog/Take-This-Job-And)](https://github.com/diirtydog) Andrew Wales
+  
   [![Sahil Janbandhu](https://contrib.rocks/image?repo=sahiljanbandhu/Weather-Dashboard)](https://github.com/sahiljanbandhu) Sahil Janbandhu (Original Design)
   + James Fisher (Updated Design)
 
