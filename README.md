@@ -5,7 +5,7 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
 
   ![Language](http://img.shields.io/github/languages/top/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor)
   
-  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sly-Ry&repo=WorldWide-Weather)](https://github.com/Sly-Ry/WorldWide-Weather)
+  [![Top Langs](https://WorldWide-Weather.vercel.app/api/top-langs/?username=Sly-Ry&repo=WorldWide-Weather)](https://github.com/Sly-Ry/WorldWide-Weather)
   
   ## Description 
   
