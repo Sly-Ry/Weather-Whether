@@ -5,8 +5,6 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
 
   ![Language](http://img.shields.io/github/languages/top/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/Sly-Ry/WorldWide-Weather?style=flat&logo=appveyor)
   
-  ![Language](https://api.github.com/repos/Sly-Ry/WorldWide-Weather/languages) 
-  
   ## Description 
   
   A weather dashboard that displays the current and 5-Days forecast of a searched city using the server-side API retrived from the Open Weather API.
@@ -70,6 +68,7 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
   ## Comments
   
   <img src="https://avatars.githubusercontent.com/u/93052960?v=4" alt="Sly-Ry" width="30%" />
+  ![Top Languages](https://github-readme-stats.vercel.app/api?username=Sly-Ry&theme=cobalt)](https://github.com/Sly-Ry/github-readme-stats)
   
   For any questions and/or suggestions, please contact me:
  
