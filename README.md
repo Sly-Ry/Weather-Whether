@@ -12,8 +12,9 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
   ## Table of Contents
   * [Usage](#usage)
   * [Contributing](#contributing)
-  * [Tests](#tests)
   * [License](#license)
+  * [Credit](#Credit)
+  * [Comment](#Comment)
   
   ## Usage 
 
