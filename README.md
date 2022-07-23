@@ -59,6 +59,9 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
   
   ## Credit
   
+  + Ryan Williams   
+  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sly-Ry&theme=cobalt)
+  
   + Andrew Wales
   + Sahil Janbandhu (Original Design)
   + James Fisher (Updated Design)
@@ -69,13 +72,11 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
   ## Comments
   
   <img src="https://avatars.githubusercontent.com/u/93052960?v=4" alt="Sly-Ry" width="30%" />
-  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sly-Ry&theme=cobalt)
   
   For any questions and/or suggestions, please contact me:
  
   GitHub: [@Sly-Ry](https://github.com/Sly-Ry)
-  
-    
+      
   Email: ryan.williams93@aol.com
     
   LinkedIn: https://www.linkedin.com/in/ryan-williams-338334224/
