@@ -50,13 +50,7 @@ URL: https://sly-ry.github.io/WorldWide-Weather/
   - Push your branch (git push)
   - Create a new Pull Request
 
-Following a code review, your feature will be merged.
-
-  ## Tests
-  
-  *Tests for application.*
-  
-  Create a feature branch (git checkout -b NAME-HERE)
+  Following a code review, your feature will be merged.
 
   ## License
 
