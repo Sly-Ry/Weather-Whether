@@ -4,119 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>WWW</title>
-    <!-- Font Awesome CSS Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/asignment6.css">
-    
+    <title>Worldwide Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Ibarra+Real+Nova:wght@400;500;600;700&family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
 <body>
-    <!-- Jumbotron for header -->
-    <header class="jumbotron-fluid w-container p-4 bg-primary text-center text-white">
-        <h1><strong><u>Weather Dashboard</u></strong></h1>
-    </header>
-    <br>
-    <main class="container">
-        <!-- row for searching cities -->
-        <div class="row">
-
-            <div class="col-sm-4 bg-light">
-
-                <h4 class="pt-1"><strong>Location:</strong></h4>
-
-                <!-- html for handling inputs -->
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="search-city" aria-label="City Search" aria-describedby="search-button" placeholder="City, ST">
-                    <div class="input-group-append">
-                        <button class="btn bg-primary text-white" id="search-button"><i class="fa fa-search"></i></button>
-                    </div>
-                </div>
-
-                <!-- section for search city history -->
-                <button class="btn btn-primary" type="button" id="clear-history">Clear</button>
-                <ul class="list-group">
-
-                </ul>
-            </div>
-
-            <!-- Current Weather Forecast -->
-            <div class="col-sm-8">
-
-                <div class="row ml-2 border border-dark rounded">
-
-                    <div class="col-sm-12" id="current-weather">
-
-                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
-                        <p>Temperature:<span class="current" id="temperature"></span></p>
-                        <p>Humidity:<span class="current" id="humidity"></span></p>
-                        <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
-                        <p>UV index:<span class="current bg-danger rounded py-2 px-2 text-white" id="uv-index"></span></p>
-                    </div>
-                </div>
-                <br>
-                <!-- Weekly Forecast Data -->
-                <div class="col-sm-12" id="forecast">
-
-                    <h3>5-Day Forecast:</h3>
-                    
-                    <div class="row text-light">
-                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                            <p id="fDate0"></p>
-                            <p id="fImg0"></p>
-                            <p>Temp: <span id="fTemp0"></span></p>
-                            <p>Humidity: <span id="fHumidity0"></span></p>
-                        </div>
-                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                            <p id="fDate1"></p>
-                            <p id="fImg1"></p>
-                            <p>Temp: <span id="fTemp1"></span></p>
-                            <p>Humidity: <span id="fHumidity1"></span></p>
-                        </div>
-                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                            <p id="fDate2"></p>
-                            <p id="fImg2"></p>
-                            <p>Temp: <span id="fTemp2"></span></p>
-                            <p>Humidity: <span id="fHumidity2"></span></p>
-                        </div>
-                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                            <p id="fDate3"></p>
-                            <p id="fImg3"></p>
-                            <p>Temp: <span id="fTemp3"></span></p>
-                            <p>Humidity: <span id="fHumidity3"></span></p>
-                        </div>
-                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                            <p id="fDate4"></p>
-                            <p id="fImg4"></p>
-                            <p>Temp: <span id="fTemp4"></span></p>
-                            <p>Humidity: <span id="fHumidity4"></span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>            
+    <div class="card">
+        <div class="search">
+            <input type="text" class="search-bar" placeholder="Search">
+            <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.4em" width="1.4em" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z">
+                </path>
+            </svg></button>
         </div>
-    </main>
-
-    <!-- footer section -->
-    <footer class="mt-5 p-3 text-center bg-light">
-        Weather Dashboard &copy 2022
-        <link
-            rel="stylesheet"
-            type="text"
-            href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
-        />
-        Made <i class="icon ion-heart"></i>By
-        <a href="https://github.com/Sly-Ry" target="blank">Ryan Williams</a>
-    </footer>
-
-    <!-- JQuery JS scripts -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JS script-->
-    <script src="./assets/js/index.js"></script>
+        <div class="weather">
+            <h2 class="city">Weather in Austin</h2>
+            <h1 class="temp">51°C</h1>
+            <img src="" alt="" class="icon" />
+            <div class="description">Hot</div>
+            <div class="humidity">Humidity: 60%</div>
+            <div class="wind">Wind Spd: 5.6 km/h</div>
+        </div>
+    </div>
 </body>
 </html>

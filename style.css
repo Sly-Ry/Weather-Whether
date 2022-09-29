@@ -1,0 +1,92 @@
+:root {
+    --primary: #f7f7f7;
+    --secondary: #4fceaa;
+    --tertiary: #1387e6;
+    --quadriary: #2b5cb6;
+    --light-dark: #9c9bec;
+    --dark: #31244b;
+    --void: #000000;
+    --border-radius: .3rem;
+}
+  
+* {
+    box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: #222;
+  background-image: url('https://source.unsplash.com/random/1600x900/?landscape');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  background: #000000d0;
+  color: white;
+  padding: 2em;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 400px;
+  margin: 1em;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 36px;
+  width: 36px;
+  outline: none;
+  background: #7c7c7c7c;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 110%;
+  width: calc(100% - 50px);
+}
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+h1.temp {
+  margin: 0;
+}
+
+.forecast {
+  font-size: 0.9em;
+}
+
+
+/* span {
+  font-size: 1em;
+} */
+/* 
+li:hover {
+  background-color: lightslategray;
+  text-decoration: underline;
+} */
+
+  
