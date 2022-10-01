@@ -1,15 +1,15 @@
 //V2
 let weather = {
-    "APIKey": "2632ab542fff737012a28d74931b6af5",
+    "apiKey": "2632ab542fff737012a28d74931b6af5",
     getWeather: function(city){
         fetch(
             "https://api.openweathermap.org/data/2.5/weather?q=" 
             + city 
-            + "&units=metric&APPID=" 
-            + this.APIKey
+            + "&units=metric&appid=" 
+            + this.apiKey
         )
         .then((response) => response.json())
-        .then((data) => console.log(response));
+        .then((data) => this.displayWeather(data));
     },
     // display weather for searched city 
     displayWeather: function(data){
@@ -20,6 +20,11 @@ let weather = {
         console.log(name, icon, description, temp, humidity, speed)
 
         document.querySelector(".city").innerText = "Weather in " + name
+        document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png"
+        document.querySelector(".description").innerText = description
+        document.querySelector(".temp").innerText = temp + "°C"
+        document.querySelector(".humidity").innerText = "Humidity: " + humidity +"%"
+        document.querySelector(".wind").innerText = "Wind Speed: " + speed + " km/h"
     }  
 }
 
@@ -50,7 +55,7 @@ let weather = {
 //     return 1;
 // }
 
-// var APIKey = '2632ab542fff737012a28d74931b6af5';
+// var apiKey = '2632ab542fff737012a28d74931b6af5';
 
 // // display weather for searched city 
 // function displayWeather(e){
@@ -66,7 +71,7 @@ let weather = {
 // } 
 
 // function currentWeather(city){
-//     var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=' + APIKey;
+//     var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=' + apiKey;
 
 //     $.ajax({
 //         url: queryURL,
@@ -131,7 +136,7 @@ let weather = {
 // // returns the UVIndex response
 // function UVIndex(ln, lt){
 //     // url for UVIndex
-//     var uvURL = 'https://api.openweathermap.org/data/2.5/uvi?appid=' +  APIKey + '&lat=' + lt + '&lon=' + ln
+//     var uvURL = 'https://api.openweathermap.org/data/2.5/uvi?appid=' +  apiKey + '&lat=' + lt + '&lon=' + ln
 
 //     $.ajax({
 //         url: uvURL,
@@ -144,7 +149,7 @@ let weather = {
 // // display 5 day forecast for current city
 // function forecast(cityId){
 //     var weekly = false;
-//     var queryForecastURL = 'https://api.openweathermap.org/data/2.5/forecast?id=' + cityId + '&appid=' + APIKey;
+//     var queryForecastURL = 'https://api.openweathermap.org/data/2.5/forecast?id=' + cityId + '&appid=' + apiKey;
 
 //     $.ajax({
 //         url: queryForecastURL,
