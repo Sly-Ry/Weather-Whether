@@ -19,7 +19,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Open Sans', serif;
   background: #222;
   background-image: url('https://source.unsplash.com/random/1600x900/?landscape');
   background-repeat: no-repeat;
@@ -73,11 +73,39 @@ button:hover {
 
 h1.temp {
   margin: 0;
+  margin-bottom: 0.4em;
 }
+
+.flex {
+  display: flex;
+  align-items: center;
+
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+/* 
 
 .forecast {
   font-size: 0.9em;
-}
+} */
 
 
 /* span {
